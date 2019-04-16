@@ -1,0 +1,3 @@
+/home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles/lena.dir
+/home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles/edit_cache.dir

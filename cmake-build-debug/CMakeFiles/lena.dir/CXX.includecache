@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/miguel/CLionProjects/lena/PDIUtils.cpp
+PDIUtils.h
+/home/miguel/CLionProjects/lena/PDIUtils.h
+algorithm
+-
+cmath
+-
+iostream
+-
+
+/home/miguel/CLionProjects/lena/PDIUtils.h
+opencv2/opencv.hpp
+-
+cstdarg
+-
+
