@@ -3,29 +3,39 @@
 #include "opencv2/opencv.hpp"
 
 using namespace cv;
+using namespace std;
 
 int main() {
     Mat imagem;
     Mat imagemResultado;
-    imagem = imread("/home/miguel/Pictures/testeLimiarizacao1.jpg");
+    imagem = imread("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/lena2.jpg", 1);
     //imagem = imread("/home/miguel/Pictures/insert.png", 0);
-    imshow("Original", imagem);
+
     imagem = PDIUtils::escalaCinza(imagem);
+    imshow("Original", imagem);
+    //std::vector<float> teste;
 
-    std::vector<float> teste;
+    //float porcentagem;
 
-    float porcentagem;
+    Matriz novoKernel = vector<vector<int>>();
+    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
+    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
+    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
+    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
+    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
+    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
 
-    teste = PDIUtils::histograma(imagem);
+    imagemResultado = PDIUtils::suavizacao(imagem, novoKernel);
+    imagemResultado = PDIUtils::limiarizacao(imagemResultado, 100);
+    imwrite("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/lena3.jpg", imagemResultado);
 
-
-    for(int i = 0; i < 255; i++){
+    //for(int i = 0; i < 255; i++){
         //std::cout << "valor " + i << " " << std::endl << teste[i];
         //std::cout << teste[i] << std::endl;
-        porcentagem = porcentagem + teste[i];
-    }
+        //porcentagem = porcentagem + teste[i];
+    //}
 
-    std::cout << "porcentagem: " << porcentagem;
+    //std::cout << "porcentagem: " << porcentagem;
 
     //imshow("Escala de Cinza", imagem);
     //imwrite("/home/miguel/teste.jpeg", imagem);
@@ -41,7 +51,7 @@ int main() {
     //imwrite("/home/miguel/teste.jpeg", imagemResultado);
     //imagemResultado = PDIUtils::linearParticionada(imagemResultado, 30, 10, 180, 200);
 
-    //imshow("Resultado", imagemResultado);
+    imshow("Resultado", imagemResultado);
 
     //imwrite("/home/miguel/test.jpeg", imagemResultado);
 

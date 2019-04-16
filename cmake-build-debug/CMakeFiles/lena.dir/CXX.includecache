@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.cpp
-PDIUtils.h
-/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h
-algorithm
--
-cmath
--
-iostream
--
-
 /home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h
 opencv2/opencv.hpp
 -

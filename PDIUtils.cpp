@@ -16,6 +16,7 @@ cv::Mat PDIUtils::escalaCinza(cv::Mat imagemColorida) {
     return aux;
 }
 
+
 cv::Mat PDIUtils::negativo(cv::Mat imagemBase) {
     cv::Mat aux = imagemBase.clone();
 
@@ -177,6 +178,27 @@ cv::Mat PDIUtils::linearParticionada(cv::Mat imagemBase, int r1, int s1, int r2,
         }
     }
     return imagem;
+}
+
+cv::Mat PDIUtils::suavizacao(cv::Mat imagemBase, Matriz kernel) {
+
+    cv::Mat aux = imagemBase.clone();
+    //para cada pixel da imagem
+    for (int x = kernel.size() / 2; x < aux.rows - kernel.size() / 2; x++) {
+        for (int y = kernel.size() / 2; y < aux.cols - kernel.size() / 2; y++) {;
+
+            int somatorio = 0;
+            //aplicar uma operação do kernel
+            for(int xk = 0; xk < kernel.size(); xk++){
+                for (int yk = 0; yk < kernel.size(); yk++){
+                    somatorio += imagemBase.at<PixelEC>(x - (kernel.size() / 2) + xk, y - (kernel.size() / 2) + yk);
+                }
+            }
+            somatorio = somatorio / (kernel.size() * kernel.size());
+            aux.at<PixelEC>(x, y) = somatorio;
+        }
+    }
+    return aux;
 }
 
 
