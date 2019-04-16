@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\OpenCV\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/miguel/CLionProjects/lena/cmake-build-debug"/>
+				<Option working_dir="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/miguel/CLionProjects/lena/cmake-build-debug"/>
+				<Option working_dir="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lena">
-				<Option output="/home/miguel/CLionProjects/lena/cmake-build-debug/lena" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguel/CLionProjects/lena/cmake-build-debug"/>
+				<Option output="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/lena" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 lena"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 lena"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lena/fast">
-				<Option output="/home/miguel/CLionProjects/lena/cmake-build-debug/lena" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/miguel/CLionProjects/lena/cmake-build-debug"/>
+				<Option output="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/lena" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,45 +65,45 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 lena/fast"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 lena/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/miguel/CLionProjects/lena/cmake-build-debug"/>
+				<Option working_dir="/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/lena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/miguel/CLionProjects/lena/PDIUtils.cpp">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.cpp">
 			<Option target="lena"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/PDIUtils.h">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h">
 			<Option target="lena"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/main.cpp">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/main.cpp">
 			<Option target="lena"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/CMakeLists.txt">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/../../../../usr/share/OpenCV/OpenCVConfig.cmake">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/../../../../usr/share/OpenCV/OpenCVConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/../../../../usr/share/OpenCV/OpenCVModules-relwithdebinfo.cmake">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/../../../../usr/share/OpenCV/OpenCVModules-relwithdebinfo.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
-		<Unit filename="/home/miguel/CLionProjects/lena/../../../../usr/share/OpenCV/OpenCVModules.cmake">
+		<Unit filename="/home/miguel/CLionProjects/LenaOpenCV/../../../../usr/share/OpenCV/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
 		</Unit>
 	</Project>

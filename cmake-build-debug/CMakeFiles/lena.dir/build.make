@@ -43,10 +43,10 @@ RM = /home/miguel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/miguel/CLionProjects/lena
+CMAKE_SOURCE_DIR = /home/miguel/CLionProjects/LenaOpenCV
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/miguel/CLionProjects/lena/cmake-build-debug
+CMAKE_BINARY_DIR = /home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lena.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/lena.dir/flags.make
 
 CMakeFiles/lena.dir/main.cpp.o: CMakeFiles/lena.dir/flags.make
 CMakeFiles/lena.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lena.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lena.dir/main.cpp.o -c /home/miguel/CLionProjects/lena/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lena.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lena.dir/main.cpp.o -c /home/miguel/CLionProjects/LenaOpenCV/main.cpp
 
 CMakeFiles/lena.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lena.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel/CLionProjects/lena/main.cpp > CMakeFiles/lena.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel/CLionProjects/LenaOpenCV/main.cpp > CMakeFiles/lena.dir/main.cpp.i
 
 CMakeFiles/lena.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lena.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/CLionProjects/lena/main.cpp -o CMakeFiles/lena.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/CLionProjects/LenaOpenCV/main.cpp -o CMakeFiles/lena.dir/main.cpp.s
 
 CMakeFiles/lena.dir/PDIUtils.cpp.o: CMakeFiles/lena.dir/flags.make
 CMakeFiles/lena.dir/PDIUtils.cpp.o: ../PDIUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lena.dir/PDIUtils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lena.dir/PDIUtils.cpp.o -c /home/miguel/CLionProjects/lena/PDIUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lena.dir/PDIUtils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lena.dir/PDIUtils.cpp.o -c /home/miguel/CLionProjects/LenaOpenCV/PDIUtils.cpp
 
 CMakeFiles/lena.dir/PDIUtils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lena.dir/PDIUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel/CLionProjects/lena/PDIUtils.cpp > CMakeFiles/lena.dir/PDIUtils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/miguel/CLionProjects/LenaOpenCV/PDIUtils.cpp > CMakeFiles/lena.dir/PDIUtils.cpp.i
 
 CMakeFiles/lena.dir/PDIUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lena.dir/PDIUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/CLionProjects/lena/PDIUtils.cpp -o CMakeFiles/lena.dir/PDIUtils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/miguel/CLionProjects/LenaOpenCV/PDIUtils.cpp -o CMakeFiles/lena.dir/PDIUtils.cpp.s
 
 # Object files for target lena
 lena_OBJECTS = \
@@ -112,7 +112,7 @@ lena: /usr/lib64/libopencv_imgcodecs.so.3.4.1
 lena: /usr/lib64/libopencv_imgproc.so.3.4.1
 lena: /usr/lib64/libopencv_core.so.3.4.1
 lena: CMakeFiles/lena.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lena"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lena"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lena.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,6 +125,6 @@ CMakeFiles/lena.dir/clean:
 .PHONY : CMakeFiles/lena.dir/clean
 
 CMakeFiles/lena.dir/depend:
-	cd /home/miguel/CLionProjects/lena/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguel/CLionProjects/lena /home/miguel/CLionProjects/lena /home/miguel/CLionProjects/lena/cmake-build-debug /home/miguel/CLionProjects/lena/cmake-build-debug /home/miguel/CLionProjects/lena/cmake-build-debug/CMakeFiles/lena.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/miguel/CLionProjects/LenaOpenCV /home/miguel/CLionProjects/LenaOpenCV /home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug /home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug /home/miguel/CLionProjects/LenaOpenCV/cmake-build-debug/CMakeFiles/lena.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lena.dir/depend
 

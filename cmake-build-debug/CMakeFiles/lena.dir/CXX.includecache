@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/miguel/CLionProjects/lena/PDIUtils.cpp
+/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.cpp
 PDIUtils.h
-/home/miguel/CLionProjects/lena/PDIUtils.h
+/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h
 algorithm
 -
 cmath
@@ -16,9 +16,17 @@ cmath
 iostream
 -
 
-/home/miguel/CLionProjects/lena/PDIUtils.h
+/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h
 opencv2/opencv.hpp
 -
 cstdarg
 -
+
+/home/miguel/CLionProjects/LenaOpenCV/main.cpp
+iostream
+-
+PDIUtils.h
+/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h
+opencv2/opencv.hpp
+/home/miguel/CLionProjects/LenaOpenCV/opencv2/opencv.hpp
 
