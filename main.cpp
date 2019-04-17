@@ -30,11 +30,11 @@ int main() {
     novoKernelGauss.push_back({6, 16, 24, 16, 4});
     novoKernelGauss.push_back({1, 4, 6, 4, 1});
 
-    imagemResultado = PDIUtils::suavizacao(imagem, novoKernel);
-    //imagemResultado2 = PDIUtils::suavizacao(imagemResultado, novoKernelGauss);
-    imagemResultado2 = PDIUtils::suavizacaoMediana(imagemResultado, 9);
+    //imagemResultado = PDIUtils::suavizacao(imagem, novoKernel);
+    imagemResultado = PDIUtils::suavizacao(imagem, novoKernelGauss);
+    imagemResultado2 = PDIUtils::suavizacaoMediana(imagemResultado, 5);
     imshow("suavizacao", imagemResultado);
-    imshow("suavizacaoPonderada", imagemResultado2);
+    imshow("Suavizacao Mediana", imagemResultado2);
 
 
 
