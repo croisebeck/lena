@@ -8,7 +8,8 @@ using namespace std;
 int main() {
     Mat imagem;
     Mat imagemResultado;
-    imagem = imread("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/lena2.jpg", 1);
+    Mat imagemResultado2;
+    imagem = imread("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/placa.tif", 1);
     //imagem = imread("/home/miguel/Pictures/insert.png", 0);
 
     imagem = PDIUtils::escalaCinza(imagem);
@@ -18,16 +19,28 @@ int main() {
     //float porcentagem;
 
     Matriz novoKernel = vector<vector<int>>();
-    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
-    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
-    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
-    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
-    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
-    novoKernel.push_back({1, 1, 1, 1, 1, 1, 1, 1});
+    novoKernel.push_back({1, 1, 1});
+    novoKernel.push_back({1, 1, 1});
+    novoKernel.push_back({1, 1, 1});
+
+    Matriz novoKernelGauss = vector<vector<int>>();
+    novoKernelGauss.push_back({1, 4, 6, 4, 1});
+    novoKernelGauss.push_back({6, 16, 24, 16, 4});
+    novoKernelGauss.push_back({6, 24, 36, 24, 6});
+    novoKernelGauss.push_back({6, 16, 24, 16, 4});
+    novoKernelGauss.push_back({1, 4, 6, 4, 1});
 
     imagemResultado = PDIUtils::suavizacao(imagem, novoKernel);
-    imagemResultado = PDIUtils::limiarizacao(imagemResultado, 100);
-    imwrite("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/lena3.jpg", imagemResultado);
+    //imagemResultado2 = PDIUtils::suavizacao(imagemResultado, novoKernelGauss);
+    imagemResultado2 = PDIUtils::suavizacaoMediana(imagemResultado, 9);
+    imshow("suavizacao", imagemResultado);
+    imshow("suavizacaoPonderada", imagemResultado2);
+
+
+
+
+    //imagemResultado = PDIUtils::limiarizacao(imagemResultado, 100);
+
 
     //for(int i = 0; i < 255; i++){
         //std::cout << "valor " + i << " " << std::endl << teste[i];
@@ -51,7 +64,7 @@ int main() {
     //imwrite("/home/miguel/teste.jpeg", imagemResultado);
     //imagemResultado = PDIUtils::linearParticionada(imagemResultado, 30, 10, 180, 200);
 
-    imshow("Resultado", imagemResultado);
+
 
     //imwrite("/home/miguel/test.jpeg", imagemResultado);
 

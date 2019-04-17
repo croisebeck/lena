@@ -7,6 +7,8 @@
 #include <iostream>
 
 
+using namespace std;
+
 cv::Mat PDIUtils::escalaCinza(cv::Mat imagemColorida) {
     cv::Mat aux = imagemColorida.clone();
 
@@ -188,14 +190,39 @@ cv::Mat PDIUtils::suavizacao(cv::Mat imagemBase, Matriz kernel) {
         for (int y = kernel.size() / 2; y < aux.cols - kernel.size() / 2; y++) {;
 
             int somatorio = 0;
+            int somatorioPesos = 0;
             //aplicar uma operação do kernel
             for(int xk = 0; xk < kernel.size(); xk++){
                 for (int yk = 0; yk < kernel.size(); yk++){
-                    somatorio += imagemBase.at<PixelEC>(x - (kernel.size() / 2) + xk, y - (kernel.size() / 2) + yk);
+                    somatorio += imagemBase.at<PixelEC>(x - (kernel.size() / 2) + xk, y - (kernel.size() / 2) + yk) * kernel[xk][yk];
+                    somatorioPesos += kernel[xk][yk];
                 }
             }
-            somatorio = somatorio / (kernel.size() * kernel.size());
+            somatorio = somatorio / somatorioPesos;
             aux.at<PixelEC>(x, y) = somatorio;
+        }
+    }
+    return aux;
+}
+
+cv::Mat PDIUtils::suavizacaoMediana(cv::Mat imagemBase, int tamanhoKernel) {
+
+    cv::Mat aux = imagemBase.clone();
+    //para cada pixel da imagem
+    for (int x = tamanhoKernel / 2; x < aux.rows - tamanhoKernel / 2; x++) {
+        for (int y = tamanhoKernel / 2; y < aux.cols - tamanhoKernel / 2; y++) {;
+
+            vector<int> vizinhanca = vector<int>();
+
+            //aplicar uma operação do kernel
+            for(int xk = 0; xk < tamanhoKernel; xk++){
+                for (int yk = 0; yk < tamanhoKernel; yk++){
+                    vizinhanca.push_back(imagemBase.at<PixelEC>(x - (tamanhoKernel / 2) * xk, y - (tamanhoKernel + yk)));
+                }
+            }
+
+            sort(vizinhanca.begin(), vizinhanca.end());
+            aux.at<PixelEC>(x, y) = vizinhanca[vizinhanca.size() / 2];
         }
     }
     return aux;

@@ -31,6 +31,8 @@ public:
     static cv::Mat linearParticionada(cv::Mat imagemBase, int r1, int s1, int r2, int s2);
     static cv::Mat suavizacao(cv::Mat imagemBase, Matriz kernel);
 
+    static cv::Mat suavizacaoMediana(cv::Mat imagemBase, int tamanhoKernel);
+
 };
 
 
