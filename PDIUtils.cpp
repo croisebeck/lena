@@ -12,8 +12,8 @@ using namespace std;
 cv::Mat PDIUtils::escalaCinza(cv::Mat imagemColorida) {
     cv::Mat aux = imagemColorida.clone();
 
-    cv::cvtColor(imagemColorida, aux, CV_BGR2GRAY);
-    //cv::cvtColor(imagemColorida, aux, cv::COLOR_BGR2GRAY);
+    //cv::cvtColor(imagemColorida, aux, CV_BGR2GRAY);
+    cv::cvtColor(imagemColorida, aux, cv::COLOR_BGR2GRAY);
 
     return aux;
 }
@@ -187,6 +187,7 @@ cv::Mat PDIUtils::suavizacao(cv::Mat imagemBase, Matriz kernel) {
     cv::Mat aux = imagemBase.clone();
     //para cada pixel da imagem
     for (int x = kernel.size() / 2; x < aux.rows - kernel.size() / 2; x++) {
+
         for (int y = kernel.size() / 2; y < aux.cols - kernel.size() / 2; y++) {;
 
             int somatorio = 0;
