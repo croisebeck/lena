@@ -22,6 +22,14 @@ opencv2/opencv.hpp
 cstdarg
 -
 
+/home/miguel/CLionProjects/LenaOpenCV/main.cpp
+iostream
+-
+PDIUtils.h
+/home/miguel/CLionProjects/LenaOpenCV/PDIUtils.h
+opencv2/opencv.hpp
+/home/miguel/CLionProjects/LenaOpenCV/opencv2/opencv.hpp
+
 /usr/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
 /usr/include/opencv4/opencv2/opencv2/core.hpp

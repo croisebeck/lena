@@ -229,6 +229,132 @@ cv::Mat PDIUtils::suavizacaoMediana(cv::Mat imagemBase, int tamanhoKernel) {
     return aux;
 }
 
+cv::Mat PDIUtils::fechamento(cv::Mat imagemBase, Matriz kernel) {
+    return erosao(dilatacao(imagemBase, kernel), kernel);
+}
+
+Matriz PDIUtils::EERetangulo(int tamanhoX, int tamanhoY) {
+    Matriz novoKernel = vector<vector<int>>();
+    for (int i = 0; i < tamanhoY; i++) {
+        novoKernel.push_back(vector<int>());
+        for (int j = 0; j < tamanhoX; j++) {
+            novoKernel[i].push_back(1);
+        }
+    }
+
+    return novoKernel;
+}
+
+Matriz PDIUtils::kernelGauss5() {
+    Matriz novoKernelGauss = vector<vector<int>>();
+    novoKernelGauss.push_back({ 1,  4,  6, 4,  1 });
+    novoKernelGauss.push_back({ 4, 16, 24, 16, 4 });
+    novoKernelGauss.push_back({ 6, 24, 36, 24, 6 });
+    novoKernelGauss.push_back({ 4, 16, 24, 16, 4 });
+    novoKernelGauss.push_back({ 1,  4,  6, 4,  1 });
+
+    return novoKernelGauss;
+}
+
+Matriz PDIUtils::kernelAritmetico(int tamanho) {
+    Matriz novoKernel = vector<vector<int>>();
+    for (int i = 0; i < tamanho; i++) {
+        novoKernel.push_back(vector<int>());
+        for (int j = 0; j < tamanho; j++) {
+            novoKernel[i].push_back(1);
+        }
+    }
+
+    return novoKernel;
+}
+
+cv::Mat PDIUtils::abertura(cv::Mat imagemBase, Matriz kernel) {
+    return dilatacao(erosao(imagemBase, kernel), kernel);
+}
+
+cv::Mat PDIUtils::erosao(cv::Mat imagemBase, Matriz kernel) {
+    cv::Mat aux = imagemBase.clone();
+
+    for (int x = 0; x < aux.rows; x++) {
+        for (int y = 0; y < aux.cols; y++) {
+
+            for (int xk = 0; xk < kernel.size(); xk++) {
+                for (int yk = 0; yk < kernel[0].size(); yk++) {
+                    int xImg = x - (kernel.size() / 2) + xk;
+                    int yImg = y - (kernel[0].size() / 2) + yk;
+                    if(xImg >= 0 && xImg < aux.rows && yImg >= 0 && yImg < aux.cols && imagemBase.at<PixelEC>(xImg, yImg) < 128 && kernel[xk][yk] == 1)
+                        aux.at<PixelEC>(x, y) = 0;
+                }
+            }
+        }
+    }
+
+    return aux;
+}
+
+cv::Mat PDIUtils::agucamento(cv::Mat imagemBase, Matriz kernel) {
+    cv::Mat aux = laplaciano(imagemBase, kernel);
+
+    for (int x = 0; x < imagemBase.rows; x++) {
+        for (int y = 0; y < imagemBase.cols; y++) {
+            int novoPixel = aux.at<PixelEC>(x, y) + imagemBase.at<PixelEC>(x, y) - 128;
+            if (novoPixel < 0)
+                novoPixel = 0;
+            else if (novoPixel > 255)
+                novoPixel = 255;
+
+            aux.at<PixelEC>(x, y) = novoPixel;
+        }
+    }
+
+    return aux;
+}
+
+cv::Mat PDIUtils::laplaciano(cv::Mat imagemBase, Matriz kernel) {
+    cv::Mat aux = imagemBase.clone();
+
+    for (int x = kernel.size() / 2; x < aux.rows - kernel.size() / 2; x++) {
+        for (int y = kernel.size() / 2; y < aux.cols - kernel.size() / 2; y++) {
+
+            int somatorio = 0;
+            for (int xk = 0; xk < kernel.size(); xk++) {
+                for (int yk = 0; yk < kernel.size(); yk++) {
+                    somatorio += imagemBase.at<PixelEC>(x - (kernel.size() / 2) + xk, y - (kernel.size() / 2) + yk) * kernel[xk][yk];
+                }
+            }
+            somatorio += 128;
+            if (somatorio > 255)
+                somatorio = 255;
+            else if (somatorio < 0)
+                somatorio = 0;
+
+            aux.at<PixelEC>(x, y) = somatorio;
+        }
+    }
+
+    return aux;
+}
+
+cv::Mat PDIUtils::dilatacao(cv::Mat imagemBase, Matriz kernel) {
+    cv::Mat aux = imagemBase.clone();
+
+    for (int x = 0; x < aux.rows; x++) {
+        for (int y = 0; y < aux.cols; y++) {
+
+            for (int xk = 0; xk < kernel.size(); xk++) {
+                for (int yk = 0; yk < kernel[0].size(); yk++) {
+                    int xImg = x - (kernel.size() / 2) + xk;
+                    int yImg = y - (kernel[0].size() / 2) + yk;
+                    if (xImg >= 0 && xImg < aux.rows && yImg >= 0 && yImg < aux.cols && imagemBase.at<PixelEC>(xImg, yImg) > 128 && kernel[xk][yk] == 1)
+                        aux.at<PixelEC>(x, y) = 255;
+                }
+            }
+        }
+    }
+
+    return aux;
+}
+
 
 /**
  * algoritmo de OTSU
