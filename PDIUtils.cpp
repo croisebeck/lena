@@ -377,3 +377,42 @@ std::pair<float,float> media(std::vector<float> hist, int limiar, float peso1, f
     return pesos;
 }
 
+
+cv::Mat PDIUtils::transformadaHough(cv::Mat imagemBase)
+{
+    cv::Mat aux = imagemBase.clone();
+
+    int maxDist = (sqrt(pow(aux.rows, 2) + pow(aux.cols, 2)));
+    int minDist = -maxDist;
+    int rho = 0;
+    int theta = 0;
+    int varAux = 0;
+
+    float thetaPi;
+    float rhoFinal;
+
+    cv::Mat imagemResultado = cv::Mat(180, 180, CV_8U, cv::Scalar(0, 0, 0));
+
+    for (int i = 0; i < aux.rows; i++) {
+        for (int j = 0; j < aux.cols; j++) {
+
+            if (aux.at<PixelEC>(i, j) == 255) {
+
+                for (theta = -90; theta < 90; theta++) {
+                    thetaPi = theta * 3.14159265358979323846 / 180.0;
+                    rho = round((j * cos(thetaPi)) + (i * sin(thetaPi)));
+
+                    rhoFinal = (rho + maxDist) * 180 / (maxDist * 2);
+                    varAux = imagemResultado.at<PixelEC>(rhoFinal, theta + 90);
+                    imagemResultado.at<PixelEC>(rhoFinal, theta + 90) = (varAux + 1 > 255) ? 255 : varAux + 1;
+                }
+            }
+        }
+    }
+
+    return imagemResultado;
+
+}
+
+
+

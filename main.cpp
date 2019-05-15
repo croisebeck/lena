@@ -11,10 +11,10 @@ int main() {
     Mat imagem;
     Mat imagemResultado;
     Mat imagemResultado2;
-    imagem = imread("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/placa.tif", 1);
+    imagem = imread("/home/miguel/CLionProjects/LenaOpenCV/ImagensSuavizacao/cartaMagicBorda.png", 1);
     //imagem = imread("/home/miguel/Pictures/insert.png", 0);
 
-    imagem = PDIUtils::escalaCinza(imagem);
+    //imagem = PDIUtils::escalaCinza(imagem);
     imshow("Original", imagem);
     //std::vector<float> teste;
 
@@ -36,14 +36,14 @@ int main() {
 
 
 
-    imagemResultado = PDIUtils::suavizacao(imagem, novoKernelGauss);
-    imagemResultado2 = PDIUtils::suavizacaoMediana(imagemResultado, 5);
-    imshow("suavizacao", imagemResultado);
-    imshow("Suavizacao Mediana", imagemResultado2);
+    //imagemResultado = PDIUtils::dilatacao(imagem, novoKernelGauss);
+    //imagemResultado2 = PDIUtils::suavizacaoMediana(imagemResultado, 5);
+    //imshow("dilatacao", imagemResultado);
+    //imshow("Suavizacao Mediana", imagemResultado2);
 
 
-
-
+    imagemResultado = PDIUtils::transformadaHough(imagem);
+    imshow("Tranforma Hulk", imagemResultado);
     //imagemResultado = PDIUtils::limiarizacao(imagemResultado, 100);
 
 

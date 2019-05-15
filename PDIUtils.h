@@ -42,6 +42,8 @@ public:
     static Matriz kernelAritmetico(int tamanho);
     static Matriz kernelGauss5();
     static Matriz EERetangulo(int tamanhoX, int tamanhoY);
+
+    static cv::Mat transformadaHough(cv::Mat imagemBase);
 };
 
 
